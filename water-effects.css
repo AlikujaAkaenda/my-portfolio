@@ -1,0 +1,211 @@
+/* ===== WATER DROPLET EFFECTS ===== */
+
+.water-droplets {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+.droplet {
+    position: absolute;
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 0.4) 40%, 
+        rgba(255, 255, 255, 0.1) 70%,
+        transparent);
+    border-radius: 50%;
+    animation: dropletFall linear forwards;
+    box-shadow: 
+        inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+        2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes dropletFall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Ripple effect when droplet hits */
+.ripple {
+    position: absolute;
+    border: 2px solid rgba(37, 99, 235, 0.4);
+    border-radius: 50%;
+    animation: rippleEffect 1s ease-out forwards;
+}
+
+@keyframes rippleEffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+}
+
+/* Water trail effect */
+.water-trail {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        rgba(37, 99, 235, 0.3), 
+        transparent);
+    animation: trailFade 0.5s ease-out forwards;
+}
+
+@keyframes trailFade {
+    0% {
+        opacity: 1;
+        height: 20px;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+/* Condensation effect on glass */
+.condensation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9997;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 3%),
+        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.02) 0%, transparent 2%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 4%),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 3%),
+        radial-gradient(circle at 90% 60%, rgba(255, 255, 255, 0.03) 0%, transparent 2%);
+    animation: condensationShift 20s ease-in-out infinite;
+}
+
+@keyframes condensationShift {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Sliding droplets on glass */
+.sliding-droplet {
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.3));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: slideDown linear forwards;
+    box-shadow: 
+        inset -1px -1px 2px rgba(255, 255, 255, 0.5),
+        1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Rain effect */
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9996;
+    overflow: hidden;
+}
+
+.rain-drop {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(37, 99, 235, 0.3),
+        rgba(37, 99, 235, 0.1));
+    animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .droplet {
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(37, 99, 235, 0.4), 
+        rgba(37, 99, 235, 0.2) 40%, 
+        rgba(37, 99, 235, 0.05) 70%,
+        transparent);
+}
+
+[data-theme="dark"] .sliding-droplet {
+    background: linear-gradient(to bottom,
+        rgba(37, 99, 235, 0.4),
+        rgba(37, 99, 235, 0.2));
+}
+
+[data-theme="dark"] .rain-drop {
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(37, 99, 235, 0.4),
+        rgba(37, 99, 235, 0.2));
+}
+
+/* Reduce effects on mobile for performance */
+@media screen and (max-width: 768px) {
+    .rain-drop {
+        display: none;
+    }
+    
+    .condensation {
+        opacity: 0.3;
+    }
+}

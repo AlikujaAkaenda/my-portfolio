@@ -1,0 +1,203 @@
+/* ===== THEME SYSTEM ===== */
+
+/* Light Theme (Default) */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #7c3aed;
+    --accent-color: #f59e0b;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --text-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-dark: #111827;
+    --bg-card: #ffffff;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    
+    /* Typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 5rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary-color: #8b5cf6;
+    --accent-color: #fbbf24;
+    --text-dark: #f9fafb;
+    --text-light: #d1d5db;
+    --text-white: #ffffff;
+    --bg-light: #1f2937;
+    --bg-dark: #111827;
+    --bg-card: #374151;
+    --border-color: #4b5563;
+    --success-color: #34d399;
+    --error-color: #f87171;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] body {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .header {
+    background: rgba(31, 41, 55, 0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .footer {
+    background: rgba(17, 24, 39, 0.9);
+}
+
+[data-theme="dark"] .footer::before {
+    background: linear-gradient(135deg, 
+        rgba(37, 99, 235, 0.15) 0%, 
+        rgba(124, 58, 237, 0.15) 50%,
+        rgba(245, 158, 11, 0.15) 100%);
+}
+
+[data-theme="dark"] .nav-menu {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+}
+
+[data-theme="dark"] .skills {
+    background: var(--bg-dark);
+}
+
+[data-theme="dark"] .skill-category {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .project-card {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .testimonial-card {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .contact-cta {
+    background: var(--bg-dark);
+}
+
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+}
+
+[data-theme="dark"] .contact-form-container {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .social-link {
+    background: var(--bg-card);
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .experience-badge {
+    background: var(--primary-color);
+}
+
+[data-theme="dark"] .tech-tag {
+    background: var(--bg-dark);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .skill-bar {
+    background: var(--bg-dark);
+}
+
+[data-theme="dark"] #newsletter-form input {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Smooth transitions for theme switching */
+body,
+.header,
+.nav-menu,
+.hero,
+.skills,
+.skill-category,
+.project-card,
+.testimonial-card,
+.contact-cta,
+.page-header,
+.contact-form-container,
+input,
+textarea,
+.social-link,
+.tech-tag,
+.skill-bar {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
