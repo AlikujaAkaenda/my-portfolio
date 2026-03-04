@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-featured online store with cart, payment integration, and admin dashboard",
+      "longDescription": "Built a complete e-commerce solution with user authentication, product management, shopping cart, and Stripe payment integration. Features include real-time inventory tracking and order management.",
+      "image": "images/projects/ecommerce.jpg",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+      "category": "fullstack",
+      "liveUrl": "https://alikujaakaenda.github.io/e-commerce-platform/",
+      "githubUrl": "https://github.com/alikujaakaenda/ecommerce",
+      "featured": true,
+      "date": "2024-12"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "Collaborative task management with real-time updates and team features",
+      "longDescription": "A productivity app with drag-and-drop task boards, real-time collaboration using WebSockets, team management, and deadline tracking.",
+      "image": "images/projects/taskapp.jpg",
+      "technologies": ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
+      "category": "fullstack",
+      "liveUrl": "https://alikujaakaenda.github.io/task-management-app/",
+      "githubUrl": "https://github.com/alikujaakaenda/taskapp",
+      "featured": true,
+      "date": "2024-10"
+    },
+    {
+      "id": 3,
+      "title": "Portfolio Website",
+      "description": "Modern portfolio website with smooth animations and responsive design",
+      "longDescription": "A clean, professional portfolio showcasing projects with dynamic content loading, contact form integration, and optimized performance.",
+      "image": "images/projects/portfolio.jpg",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "category": "frontend",
+      "liveUrl": "https://alikujaakaenda.github.io/responsive-portfolio/",
+      "githubUrl": "https://github.com/alikujaakaenda/portfolio",
+      "featured": true,
+      "date": "2024-11"
+    },
+    {
+      "id": 4,
+      "title": "Weather Dashboard",
+      "description": "Real-time weather app with forecasts and location search",
+      "longDescription": "Weather application using OpenWeather API with 7-day forecasts, location search, and weather alerts.",
+      "image": "images/projects/weather.jpg",
+      "technologies": ["React", "API", "CSS"],
+      "category": "frontend",
+      "liveUrl": "https://alikujaakaenda.github.io/weather-dashboard/",
+      "githubUrl": "https://github.com/alikujaakaenda/weather",
+      "featured": false,
+      "date": "2024-08"
+    },
+    {
+      "id": 5,
+      "title": "Blog CMS",
+      "description": "Content management system for blogs with markdown support",
+      "longDescription": "A lightweight CMS with markdown editor, image uploads, SEO optimization, and user roles.",
+      "image": "images/projects/blog.jpg",
+      "technologies": ["Node.js", "MongoDB", "Express", "EJS"],
+      "category": "backend",
+      "liveUrl": "https://alikujaakaenda.github.io/blog-cms/",
+      "githubUrl": "https://github.com/alikujaakaenda/blog-cms",
+      "featured": false,
+      "date": "2024-09"
+    },
+    {
+      "id": 6,
+      "title": "Chat Application",
+      "description": "Real-time messaging app with rooms and file sharing",
+      "longDescription": "Real-time chat with private rooms, file sharing, emoji support, and message history.",
+      "image": "images/projects/chat.jpg",
+      "technologies": ["Socket.io", "Node.js", "React", "MongoDB"],
+      "category": "fullstack",
+      "liveUrl": "https://alikujaakaenda.github.io/chat-application/",
+      "githubUrl": "https://github.com/alikujaakaenda/chat",
+      "featured": false,
+      "date": "2024-07"
+    }
+  ]
+}

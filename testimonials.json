@@ -1,0 +1,31 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Ochieng'",
+      "position": "CTO at Tech Company",
+      "company": "Tech Company",
+      "image": "images/testimonials/author1.jpg",
+      "text": "Frankline is one of the most dedicated developers I've worked with. His attention to detail and problem-solving skills are exceptional.",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Jane Wahngeci",
+      "position": "Product Manager",
+      "company": "StartupXYZ",
+      "image": "images/testimonials/author2.jpg",
+      "text": "Working with Frankline was a pleasure. He delivered high-quality code on time and was always open to feedback.",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "Mike J.Baraza",
+      "position": "Lead Developer",
+      "company": "WebSolutions Inc",
+      "image": "images/testimonials/author3.jpg",
+      "text": "Frankline's expertise in full-stack development helped us launch our product ahead of schedule. Highly recommended!",
+      "rating": 5
+    }
+  ]
+}

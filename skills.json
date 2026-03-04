@@ -1,0 +1,25 @@
+{
+  "skills": {
+    "frontend": [
+      { "name": "HTML5 & CSS3", "level": 90, "icon": "fab fa-html5" },
+      { "name": "JavaScript (ES6+)", "level": 85, "icon": "fab fa-js" },
+      { "name": "React", "level": 80, "icon": "fab fa-react" },
+      { "name": "Vue.js", "level": 75, "icon": "fab fa-vuejs" },
+      { "name": "Tailwind CSS", "level": 85, "icon": "fas fa-wind" }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 85, "icon": "fab fa-node" },
+      { "name": "Python", "level": 75, "icon": "fab fa-python" },
+      { "name": "MongoDB", "level": 80, "icon": "fas fa-database" },
+      { "name": "PostgreSQL", "level": 75, "icon": "fas fa-database" },
+      { "name": "Express.js", "level": 85, "icon": "fas fa-server" }
+    ],
+    "tools": [
+      { "name": "Git & GitHub", "level": 90, "icon": "fab fa-github" },
+      { "name": "VS Code", "level": 85, "icon": "fas fa-code" },
+      { "name": "Docker", "level": 75, "icon": "fab fa-docker" },
+      { "name": "AWS", "level": 70, "icon": "fab fa-aws" },
+      { "name": "Figma", "level": 65, "icon": "fab fa-figma" }
+    ]
+  }
+}
